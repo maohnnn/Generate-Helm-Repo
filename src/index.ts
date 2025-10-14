@@ -4,8 +4,6 @@ import staticPlugin from "@elysiajs/static";
 const app = new Elysia()
     .use(await staticPlugin({
         prefix: '/',
-        assets: 'public',
-        alwaysStatic: true,
     }))
     .listen(3000);
 

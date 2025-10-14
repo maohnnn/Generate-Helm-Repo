@@ -9,12 +9,15 @@
   "dependencies": {
     "@elysiajs/static": "^1.4.4",
     "elysia": "latest",
+    "prettier": "^3.6.2",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "tailwindcss": "4"
   },
   "devDependencies": {
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
+    "bun-plugin-tailwind": "^0.1.2",
     "bun-types": "latest"
   },
   "module": "src/index.js"
