@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import {Label} from '../components/label'
 import {Divider} from "@public/components/divider";
 import {Header} from "@public/components/header";
-import {Row} from "@public/components/row";
+import {RowLabel} from "@public/components/row-label";
 /**
  * UI Pages (React + Tailwind)
  * 1) ConfigureRepoPage — ตั้งค่า Owner/Org, ชื่อรีโป (แนะนำเป็น Helm-<AppName>), และเพิ่ม Teams
@@ -327,10 +327,10 @@ export default function RepoConfig() {
                         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
                             <h3 className="text-sm font-medium">สรุป</h3>
                             <div className="mt-3 space-y-3 text-sm">
-                                <Row label="Connection" value={connections.find((x) => x.id === connectionId)?.alias || "–"} />
-                                <Row label="Owner" value={owner || "–"} />
-                                <Row label="Repo name" value={repoName || suggestedName || "–"} />
-                                {ownerType === "Org" && <Row label="Teams" value={selectedTeams.length ? `${selectedTeams.length} team(s)` : "–"} />}
+                                <RowLabel label="Connection" value={connections.find((x) => x.id === connectionId)?.alias || "–"} />
+                                <RowLabel label="Owner" value={owner || "–"} />
+                                <RowLabel label="Repo name" value={repoName || suggestedName || "–"} />
+                                {ownerType === "Org" && <RowLabel label="Teams" value={selectedTeams.length ? `${selectedTeams.length} team(s)` : "–"} />}
                             </div>
                             {owner && repoName && (
                                 <div className="mt-4 rounded-lg border border-slate-200 p-3 text-xs dark:border-slate-800">

@@ -8,8 +8,8 @@ function App() {
 
     return (
         <main>
-            {/*<GithubConnectionCenter/>*/}
-            {/*<ConfigureRepoPage/>*/}
+            <GithubConnectionCenter/>
+            <RepoConfig/>
             <HelmConfig/>
         </main>
     )
